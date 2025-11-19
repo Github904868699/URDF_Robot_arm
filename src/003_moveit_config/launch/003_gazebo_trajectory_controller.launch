@@ -4,6 +4,6 @@
     <rosparam file="$(find 003_moveit_config)/config/003_gazebo_trajectory_control.yaml" command="load"/>
 
     <node name="arm_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-          output="screen" ns="/arm" args="arm_joint_controller"/>
+          output="screen" args="arm_joint_controller"/>
 
 </launch>

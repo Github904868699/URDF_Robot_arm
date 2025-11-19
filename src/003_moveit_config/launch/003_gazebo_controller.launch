@@ -8,17 +8,14 @@
 
     <!-- 加载controllers -->
     <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-          output="screen" ns="/arm" args="joint_state_controller
-                                          arm_joint_controller"/>
+          output="screen" args="joint_state_controller arm_joint_controller"/>
           
           
           
 
     <!-- 运行robot_state_publisher节点，发布tf  -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
-          respawn="false" output="screen">
-        <remap from="/joint_states" to="/arm/joint_states" />
-    </node>
+          respawn="false" output="screen"/>
 
 </launch>
 

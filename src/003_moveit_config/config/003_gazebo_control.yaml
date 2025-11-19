@@ -1,8 +1,7 @@
-arm:
-  # Publish all joint states -----------------------------------
-  joint_state_controller:
-    type: joint_state_controller/JointStateController
-    publish_rate: 100
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 100
 
 
 # 这里可以给gazebo中的pid参数赋值，解决gazebo启动中的No p gain specified for pid.[ERROR]报错
