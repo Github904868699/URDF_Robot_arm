@@ -14,8 +14,9 @@
 
   <!-- Launch MoveIt -->
   <include file="$(dirname)/demo.launch" pass_all_args="true">
-    <!-- robot_description is loaded by gazebo.launch, to enable Gazebo features -->
+    <!-- robot_description 由 gazebo.launch 负责加载（带有 ros_control/gazebo 配置），这里避免重复加载 -->
     <arg name="load_robot_description" value="false" />
-    <arg name="moveit_controller_manager" value="ros_control" />
+    <!-- 仍使用 simple MoveIt controller manager，通过 FollowJointTrajectory action 直接驱动 arm_joint_controller -->
+    <arg name="moveit_controller_manager" value="simple" />
   </include>
 </launch>
