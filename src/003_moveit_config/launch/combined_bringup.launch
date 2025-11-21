@@ -1,6 +1,6 @@
 <launch>
     <!-- 确保Gazebo可以找到ROS插件库（libgazebo_ros_api_plugin.so、libgazebo_ros_factory.so等） -->
-    <env name="GAZEBO_PLUGIN_PATH" value="/opt/ros/noetic/lib:$(env GAZEBO_PLUGIN_PATH)" />
+    <env name="GAZEBO_PLUGIN_PATH" value="/opt/ros/noetic/lib:$(optenv GAZEBO_PLUGIN_PATH)" />
 
     <!-- 启动 dm_motor -->
     <include file="$(find dm_motor)/launch/dm_motor.launch" />
